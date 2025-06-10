@@ -34,7 +34,7 @@
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --heading-color: #000000;
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
@@ -42,7 +42,7 @@
 .accent-background {
   --background-color: #2a1772;
   --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --heading-color: #000000;
   --surface-color: #14eb83;
   --contrast-color: #ffffff;
 }
@@ -980,10 +980,17 @@ section,
 }
 
 .featured-services .service-item .icon i {
-  color: var(--accent-color);
+  color: var(--default-color);
   font-size: 36px;
   transition: 0.3s;
 }
+
+.featured-services .service-item:hover .icon i {
+  color: var(--heading-color);
+  font-size: 36px;
+  transition: 0.3s;
+}
+
 
 .featured-services .service-item h4 {
   font-weight: 700;
@@ -992,7 +999,7 @@ section,
 }
 
 .featured-services .service-item h4 a {
-  color: var(--heading-color);
+  color: var(--default-color);
   transition: ease-in-out 0.3s;
 }
 
@@ -1007,7 +1014,7 @@ section,
 }
 
 .featured-services .service-item:hover h4 a {
-  color: var(--accent-color);
+  color: var(--heading-color);
 }
 
 /*--------------------------------------------------------------
@@ -1051,6 +1058,18 @@ section,
 .stats {
   padding-top: 0;
 }
+.stats-item {
+  /* border-radius: 10%; */
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 80px 20px;
+  transition: border ease-in-out 0.3s;
+  height: 100%;
+}
+
+
+.stats-item:hover {
+  border-color: var(--default-color);
+}
 
 .stats .stats-item {
   padding: 30px;
@@ -1060,7 +1079,7 @@ section,
 .stats .stats-item span {
   font-size: 48px;
   display: block;
-  color: var(--accent-color);
+  color: var(--default-color);
   font-weight: 700;
 }
 
@@ -1319,16 +1338,7 @@ section,
   clip-path: inset(0);
 }
 
-.call-to-action img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
+
 
 .call-to-action:before {
   content: "";
@@ -1348,7 +1358,11 @@ section,
   font-weight: 700;
   color: var(--default-color);
 }
-
+.call-to-action h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--default-color);
+}
 .call-to-action p {
   color: var(--default-color);
 }

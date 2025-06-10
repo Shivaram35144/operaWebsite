@@ -6,7 +6,7 @@
   -t shivram35144/opera-static-1:latest \
   --push .
 
-Log into ec2 - ssh -i your-key.pem ec2-user@your-ec2-ip
+Log into ec2 - ssh -i opera-app.pem ec2-user@13.218.37.84
 
 - docker pull shivram35144/opera-static-1:latest
 - docker run -d -p 80:80 shivram35144/opera-static-1
@@ -16,6 +16,7 @@ Log into ec2 - ssh -i your-key.pem ec2-user@your-ec2-ip
 
 ```
 docker ps -a   # to see running/stopped containers
+docker stop <container-id>
 docker rm <container-id>
 docker rmi <image-id>
 ```

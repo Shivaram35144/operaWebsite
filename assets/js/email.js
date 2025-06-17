@@ -1,6 +1,6 @@
 (function() {
     // Initialize EmailJS with your public key - shivaramkpk
-    emailjs.init("ybqkdDaz4fD-NJkgL");
+    emailjs.init("ybqkdDaz4fD-NJkgL"); 
 
     const form = document.getElementById('contact-form');
     const loadingDiv = form.querySelector('.loading');
@@ -31,7 +31,7 @@
         };
 
         // Send email using EmailJS
-        emailjs.send('service_bpsk78o', 'template_frf5fod', templateParams) // Replace with your service ID and template ID
+        emailjs.send('default_service', 'template_frf5fod', templateParams) // Replace with your service ID and template ID
             .then(function() {
                 loadingDiv.style.display = 'none';
                 successDiv.style.display = 'block';
@@ -45,8 +45,8 @@
             .catch(function(error) {
                 loadingDiv.style.display = 'none';
                 errorDiv.style.display = 'block';
-                errorDiv.innerHTML = 'Message could not be sent. Please try again later.';
-                console.error('EmailJS error:', error);
+                errorDiv.innerHTML = 'Message could not be sent. Please do drop a mail at karthikeyan@opmc.co.in.';
+                // console.error('EmailJS error:', error);
             })
             .finally(function() {
                 // Re-enable submit button

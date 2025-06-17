@@ -20,3 +20,26 @@ docker stop <container-id>
 docker rm <container-id>
 docker rmi <image-id>
 ```
+
+
+
+## Creating jenkins
+
+```
+# Install Java 17 (prerequisite)
+sudo yum install java-17-amazon-corretto-devel -y
+
+# Add Jenkins repository
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+
+# Install Jenkins
+sudo yum install jenkins -y --nogpgcheck
+
+# Start Jenkins
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+
+```
+
+

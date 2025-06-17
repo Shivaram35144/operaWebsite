@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /temp/           
+
+Sitemap: https://statutoryconsultants.com/sitemap.xml
